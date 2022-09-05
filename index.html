@@ -23,19 +23,26 @@
       <button class="btn nav_btn">View plans</button>
     </div>  
   </nav>
-  <div class="hero_section container">
-    <div class="hero_content">
-      <h1 class="hero_title">Humanizing your insurance.</h1>
-
-      <p class="hero_desc">
-        Get your life insurance coverage easier and faster. We blend our expertise 
-      and technology to help you find the plan that’s right for you. Ensure you 
-      and your loved ones are protected.
-      </p> 
-      <button class="btn">View plans</button> 
-    </div>
-    <div class="hero_display">
-
+  <div class="hero_section">
+    <div class="hero_cont container">
+      <div class="hero_content">
+        <h1 class="hero_title">Humanizing your insurance.</h1>
+  
+        <p class="hero_desc">
+          Get your life insurance coverage easier and faster. We blend our expertise 
+        and technology to help you find the plan that’s right for you. Ensure you 
+        and your loved ones are protected.
+        </p> 
+        <button class="btn hero_btn">View plans</button> 
+      </div>
+      <div class="hero_display">
+        <picture>
+          <source media="(min-width: 600px)" srcset="./assets/images/image-intro-desktop.jpg">
+          <img src="./assets/images/image-intro-mobile.jpg" alt="hero_img" class="hero_img">
+        </picture>
+      </div>
+      <img src="./assets/images/bg-pattern-intro-right-desktop.svg" alt="" class="hero_bg top_bg">
+      <img src="./assets/images/bg-pattern-intro-left-desktop.svg" alt="" class="hero_bg bot_bg">
     </div>
   </div>
 </header>
@@ -46,62 +53,125 @@
 
    <div class="about_cont">
     <div class="about_card">
-      Snappy Process
-  
-      Our application process can be completed in minutes, not hours. Don’t get 
-      stuck filling in tedious forms.
+      <div class="card_icon">
+        <img src="./assets/images/icon-snappy-process.svg" alt="">
+      </div>
+      <h4 class="card_title">Snappy Process</h4> 
+      <p class="card_desc">
+        Our application process can be completed in minutes, not hours. Don’t get 
+        stuck filling in tedious forms.
+      </p>
     </div>
     <div class="about_card">
-      Affordable Prices
-  
-      We don’t want you worrying about high monthly costs. Our prices may be low, 
-      but we still offer the best coverage possible.
+      <div class="card_icon">
+        <img src="./assets/images/icon-affordable-prices.svg" alt="">
+      </div>
+      <h4 class="card_title">Affordable Prices</h4> 
+      
+      <p class="card_desc">
+        We don’t want you worrying about high monthly costs. Our prices may be low, 
+        but we still offer the best coverage possible.
+      </p>
+      
     </div>
     <div class="about_card">
-      People First
-  
-      Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-      sure you’re covered when you need it.
+      <div class="card_icon">
+        <img src="./assets/images/icon-people-first.svg" alt="">
+      </div>
+      <h4 class="card_title">People First</h4> 
+      
+      <p class="card_desc">
+        Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+        sure you’re covered when you need it.
+      </p>
+      
     </div>
    </div>
   </section>
 
   <section class="container section">
     <div class="newsletter_cont">
-      <h2 class="newsletter_title">Find out more about how we work</h2> 
-
-      <button class="btn">How we work</button> 
+      <div class="news_context">
+        <h2 class="newsletter_title">Find out more about how we work</h2> 
+      </div>
+      <div class="news_button">
+        <button class="btn news_btn">How we work</button> 
+      </div>
+      
     </div>
   </section>
+
 </main>
 
 <footer class="footer">
+  <img src="./assets/images/bg-pattern-footer-desktop.svg" alt="footer_img" class="footer_img">
   <div class="container">
-    Our company
+    <div class="footer_logo">
+      <img src="./assets/images/logo.svg" alt="logo_img" class="logo_img">
 
-    How we work
-    Why Insure?
-    View plans
-    Reviews
-  
-    Help me
-  
-    FAQ
-    Terms of use
-    Privacy policy
-    Cookies
-  
-    Contact
-  
-    Sales
-    Support
-    Live chat
-  
-    Others
-  
-    Careers
-    Press
-    Licenses
+      <ul>
+        <li>
+          <a href="" class="social_link">
+            <img src="./assets/images/icon-facebook.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="social_link">
+            <img src="./assets/images/icon-twitter.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="social_link">
+            <img src="./assets/images/icon-pinterest.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="social_link">
+            <img src="./assets/images/icon-instagram.svg" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div class="footer_links">
+      <div class="footer_items">
+        <span class="footer_link">Our company</span> 
+        <ul>
+          <li>How we work</li>
+          <li>Why Insure?</li>
+          <li>View plans</li>
+          <li>Reviews</li>
+        </ul>    
+      </div>
+      <div class="footer_items">
+        <span class="footer_link">Help me</span> 
+        <ul>
+          <li>FAQ</li>
+          <li>Terms of use</li>
+          <li>Privacy policy</li>
+          <li>Cookies</li>
+        </ul>
+      </div>
+      <div class="footer_items">
+        <span class="footer_link">Contact</span> 
+        <ul>
+          <li>Sales</li>
+          <li>Support</li>
+          <li>Live chat</li>
+        </ul>
+      </div>
+      <div class="footer_items">
+        <span class="footer_link">Others</span> 
+        <ul>
+          <li>Careers</li>
+          <li>Press</li>
+          <li>Licenses</li>
+        </ul>
+        
+        
+        
+      </div>
+    </div>
   </div>
 </footer>
 

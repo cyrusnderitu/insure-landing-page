@@ -45,11 +45,19 @@ h1::before{
     height: 2px;
     width: 100px;
     background-color: var(--text-color);
-    top: -40%;
+    top: -50px;
+}
+h1::before::first-line{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100px;
+    background-color: var(--text-color);
+    bottom: 100px;
 }
 h2{
     font-family: var(--header-FF);
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 200;
     color: var(--Very-Light-Gray);
@@ -76,6 +84,7 @@ button{
     font-size: 12px;
     background-color: transparent;
     width: fit-content;
+    cursor: pointer;
 }
 img{
     max-width: 100%;
@@ -117,6 +126,23 @@ footer{
     column-gap: 2.5rem;
     text-transform: uppercase;
 }
+.nav_lists .nav_item{
+    color: black;
+}
+.nav_btn{
+    font-family: inherit;
+    transition: .3s;
+}
+.nav_btn:hover{
+    cursor: pointer;
+    background-color: var(--Very-Dark-Violet);
+    color: var(--Very-Light-Gray);
+    font-weight: 700;
+
+}
+.menu_area{
+    display: none;
+}
 
 .hero_section{
     background-color: var(--bg-color);
@@ -145,7 +171,7 @@ footer{
     flex: 1;
 }
 .hero_content{
-    margin: 8rem 0;
+    margin: 8rem 0 4rem;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -155,7 +181,7 @@ footer{
     position: absolute;
     right: 15%;
     bottom: -7rem;
-    width: 450px;
+    width: 400px;
     object-fit: cover;
     border-radius: .5rem;
 }
@@ -163,8 +189,16 @@ footer{
     color: var(--Very-Light-Gray);
     border: 2px solid var(--Very-Light-Gray);
     margin-top: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.hero_btn:hover{
+    background-color: var(--Very-Light-Gray);
+    color: var(--text-color);
+    font-weight: 700;
 }
 
+/****** ------- ABOUT SECTION --------- ********/
 .about_cont{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -181,7 +215,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem;
+    padding: 5rem;
     background-color: var(--bg-color);
     background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
     background-repeat: no-repeat;
@@ -198,7 +232,14 @@ footer{
 }
 .news_btn{
     color: var(--Very-Light-Gray);
-    border: 2px solid var(--Very-Light-Gray); 
+    border: 2px solid var(--Very-Light-Gray);
+    cursor: pointer;
+    transition: .4s; 
+}
+.news_btn:hover{
+    background-color: var(--Very-Light-Gray);
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 /******** ------ FOOTER ------- *******/
@@ -213,6 +254,12 @@ footer{
     justify-content: center;
     column-gap: .75rem;
 }
+.footer_logo .social_icon:hover{
+    fill: black;
+}
+.footer_logo .social_icon:focus{
+    fill: black;
+}
 .footer_img{
     position: absolute;
     top: 0;
@@ -220,8 +267,9 @@ footer{
 }
 .footer_links{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    column-gap: 8rem;
 }
 .footer_items{
     display: flex;
@@ -232,17 +280,274 @@ footer{
     font-weight: 600;
     margin-top: 1rem;
     font-size: 14px;
+    cursor: pointer;
     text-transform: uppercase;
+    transition: .3s;
+}
+.footer_links li:hover{
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .container{
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .nav{
+        margin-left: 4rem;
+        margin-right: 4rem; 
+    }
+    .hero_display img{
+        flex: 1;
+        position: absolute;
+        right: 5%;
+        bottom: -5rem;
+        width: 400px;
+        object-fit: cover;
+        border-radius: .5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 2rem;
+    }
+    h1::before{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 70px;
+        background-color: var(--text-color);
+        top: -30px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+    }
+    button{
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+        font-size: 10px;
+        background-color: transparent;
+        width: fit-content;
+        cursor: pointer;
+    }
+    main{
+        padding: 10rem 0 5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+    }
     .hero_display img{
         flex: 1;
         position: absolute;
         right: 5%;
         bottom: -4rem;
-        width: 450px;
+        width: 300px;
         object-fit: cover;
         border-radius: .5rem;
+    }
+    .container{
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+    .nav{
+        margin-left: 2.5rem;
+        margin-right: 2.5rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        height: 3.5rem;
+    }
+    .nav_link{
+        font-size: 12px;
+    }
+    .hero_content{
+        margin: 7rem 0 3rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .hero_design img:first-child{
+        width: 200px;
+    }
+    .hero_design img:last-child{
+        width: 120px;
+    }
+    .about_cont{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        margin-top: 4rem;
+    }
+    .card_desc{
+        font-size: 12px;
+    }
+    .about_cont img{
+        width: 50px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .newsletter_cont{
+        padding: 3rem;
+
+    }
+    .footer_links{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        column-gap: 5rem;
+    }
+    .footer_link{
+        font-size: 14px;
+    }
+    .footer_links li{
+        font-weight: 400;
+        font-size: 12px;
+        transition: .3s;
+    }
+}
+@media screen and (max-width: 500px) {
+    header{
+        overflow: hidden;
+    }
+    .nav{
+        position: relative;
+        margin-left: 1rem;
+        margin-right: 1rem; 
+        display: flex;
+        justify-content: space-between;
+    }
+    h1::before{
+        display: none;
+    }
+    .nav .menu_collapse{
+        left: 0;
+    }
+
+    .nav_menu{
+        position: absolute;
+        width: calc(100% + 2rem);
+        padding: 4rem 0;
+        margin-left: -1rem;
+        left: -150%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2.5rem;
+        z-index: 10;
+        top: 3.5rem;
+        background-color: var(--Very-Dark-Violet);
+        transition: .4s ease;
+    }
+    .menu_area{
+        display: block;
+    }
+    .menu_close{
+        position: absolute;
+        top: .65rem;
+        right: 150%;
+    }
+    .nav .close{
+        right: 1.5rem;
+    }
+    .nav_lists{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2.5rem;
+
+    }
+    .nav_link{
+        color: #fff;
+    }
+    .hero_section{
+        padding: 0 0 2rem;
+        margin: 0;
+    }
+    .hero_cont{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .hero_content,
+    .hero_display{
+        flex: 1;
+    }
+    .hero_content{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        text-align: center;
+    }
+    .hero_display{
+        width: calc(100% + 5rem);
+        margin-left: -2.5rem;
+        margin-right: -2.5rem;
+        margin-bottom: 5rem;
+    }
+    .hero_display img{
+        position: initial;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+    .hero_design{
+        display: none;
+    }
+    .section_title{
+        text-align: center;
+    }
+    .about_cont{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        margin-top: 4rem;
+    }
+    .about_card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .newsletter_cont{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer_logo{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: center;
+    }
+    .footer_links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 4rem;
+    }
+    .footer_items{
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 }

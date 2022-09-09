@@ -14,6 +14,10 @@
     <div class="nav_logo">
       <img src="./assets/images/logo.svg" alt="logo" class="logo_img">
     </div>
+    <div class="menu_area">
+      <img src="./assets/images/icon-hamburger.svg" alt="menu_icon" class="menu_open">
+      <img src="./assets/images/icon-close.svg" alt="menu_icon" class="menu_close">
+    </div>
     <div class="nav_menu">
       <ul class="nav_lists">
         <li class="nav_item"><a href="#" class="nav_link">How we work</a></li>
@@ -41,20 +45,23 @@
           <img src="./assets/images/image-intro-mobile.jpg" alt="hero_img" class="hero_img">
         </picture>
       </div>
-      <img src="./assets/images/bg-pattern-intro-right-desktop.svg" alt="" class="hero_bg top_bg">
-      <img src="./assets/images/bg-pattern-intro-left-desktop.svg" alt="" class="hero_bg bot_bg">
+      <div class="hero_design">
+        <img src="./assets/images/bg-pattern-intro-right-desktop.svg" alt="hero_bg" class="hero_bg top_bg">
+        <img src="./assets/images/bg-pattern-intro-left-desktop.svg" alt="hero_bg" class="hero_bg bot_bg">
+      </div>
     </div>
   </div>
 </header>
 
 <main>
+  
   <section class="container section">
-   <h1 class="section_tite">We’re different</h1> 
+   <h1 class="section_title">We’re different</h1> 
 
    <div class="about_cont">
     <div class="about_card">
       <div class="card_icon">
-        <img src="./assets/images/icon-snappy-process.svg" alt="">
+        <img src="./assets/images/icon-snappy-process.svg" alt="about_img" class="card_img">
       </div>
       <h4 class="card_title">Snappy Process</h4> 
       <p class="card_desc">
@@ -64,7 +71,7 @@
     </div>
     <div class="about_card">
       <div class="card_icon">
-        <img src="./assets/images/icon-affordable-prices.svg" alt="">
+        <img src="./assets/images/icon-affordable-prices.svg" alt="about_img" class="card_img">
       </div>
       <h4 class="card_title">Affordable Prices</h4> 
       
@@ -76,7 +83,7 @@
     </div>
     <div class="about_card">
       <div class="card_icon">
-        <img src="./assets/images/icon-people-first.svg" alt="">
+        <img src="./assets/images/icon-people-first.svg" alt="about_img" class="card_img">
       </div>
       <h4 class="card_title">People First</h4> 
       
@@ -111,23 +118,23 @@
 
       <ul>
         <li>
-          <a href="" class="social_link">
-            <img src="./assets/images/icon-facebook.svg" alt="">
+          <a href="#" class="social_link">
+            <img src="./assets/images/icon-facebook.svg" alt="social_icon" class="social_icon">
           </a>
         </li>
         <li>
-          <a href="" class="social_link">
-            <img src="./assets/images/icon-twitter.svg" alt="">
+          <a href="#" class="social_link">
+            <img src="./assets/images/icon-twitter.svg" alt="social_icon" class="social_icon">
           </a>
         </li>
         <li>
-          <a href="" class="social_link">
-            <img src="./assets/images/icon-pinterest.svg" alt="">
+          <a href="#" class="social_link">
+            <img src="./assets/images/icon-pinterest.svg" alt="social_icon" class="social_icon">
           </a>
         </li>
         <li>
-          <a href="" class="social_link">
-            <img src="./assets/images/icon-instagram.svg" alt="">
+          <a href="#" class="social_link">
+            <img src="./assets/images/icon-instagram.svg" alt="social_icon" class="social_icon">
           </a>
         </li>
       </ul>
@@ -174,6 +181,32 @@
     </div>
   </div>
 </footer>
+<script src="./assets/js/main.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  window.sr = ScrollReveal({ reset: true, distance: '50px' });
 
+  sr.reveal(`.hero_content, .newsletter_cont`,{ 
+    origin: 'left',
+    delay: 200,
+    duration: 2000 
+  });
+  sr.reveal('.hero_display', { 
+    origin: 'right',
+    delay: 200,
+    duration: 2000 
+  });
+  sr.reveal('.about_card', { 
+    origin: 'top',
+    delay: 200,
+    duration: 2000 
+  });
+  sr.reveal(`.footer, .footer_items`, { 
+    origin: 'bottom',
+    delay: 200, 
+    interval: 200,
+    duration: 2000 
+  });
+</script>
 </body>
 </html>

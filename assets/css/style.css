@@ -37,9 +37,12 @@ h1{
     font-size: 3.5rem;
     line-height: 1;
     font-weight: 200;
+}
+.hero_title,
+.section_title{
     position: relative;
 }
-h1::before{
+.section_title::before{
     position: absolute;
     content: "";
     height: 2px;
@@ -47,13 +50,13 @@ h1::before{
     background-color: var(--text-color);
     top: -50px;
 }
-h1::before::first-line{
+.hero_title::before{
     position: absolute;
     content: "";
     height: 2px;
     width: 100px;
     background-color: var(--text-color);
-    bottom: 100px;
+    top: -50px;
 }
 h2{
     font-family: var(--header-FF);
@@ -143,24 +146,28 @@ footer{
 .menu_area{
     display: none;
 }
+.menu_img{
+    display: none;
+}
 
 .hero_section{
     background-color: var(--bg-color);
     color: #fff;
     position: relative;
 }
-.hero_bg{
-    position: absolute;
+.hero_content{
+    position: initial;
 }
 .top_bg{
-    top: 0;
-    right: 0;
-    width: 350px;
+    position: absolute;
+    top: -40%;
+    right: -130%;
+    width: 300px;
 }
 .bot_bg{
-    left: 0;
-    bottom: -50%;
-    width: 150px;
+    position: absolute;
+    left: -4rem;
+    width: 130px;
 }
 .hero_cont{
     display: flex;
@@ -171,6 +178,7 @@ footer{
     flex: 1;
 }
 .hero_content{
+    position: inherit;
     margin: 8rem 0 4rem;
     display: flex;
     flex-direction: column;
@@ -348,6 +356,9 @@ footer{
         flex-direction: column;
         row-gap: 4rem;
     }
+    .hero_content{
+        position: initial;
+    }
     .hero_display img{
         flex: 1;
         position: absolute;
@@ -419,9 +430,24 @@ footer{
     }
 }
 @media screen and (max-width: 500px) {
-    header{
-        overflow: hidden;
+    h1{
+        font-size: 2.5rem;
     }
+    h2{
+        font-size: 2rem;
+    }
+
+    h4{
+        font-size: 1.25rem;
+    }
+    p{
+        font-size: 16px;
+        color: var(--text-color);
+        line-height: 1.5;
+    }
+    /* header{
+        overflow-y: hidden;
+    } */
     .nav{
         position: relative;
         margin-left: 1rem;
@@ -429,7 +455,7 @@ footer{
         display: flex;
         justify-content: space-between;
     }
-    h1::before{
+    .hero_title::before{
         display: none;
     }
     .nav .menu_collapse{
@@ -439,13 +465,14 @@ footer{
     .nav_menu{
         position: absolute;
         width: calc(100% + 2rem);
-        padding: 4rem 0;
+        padding-top: 4rem;
         margin-left: -1rem;
         left: -150%;
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 2.5rem;
+        min-height: 100vh;
         z-index: 10;
         top: 3.5rem;
         background-color: var(--Very-Dark-Violet);
@@ -453,6 +480,11 @@ footer{
     }
     .menu_area{
         display: block;
+    }
+    .menu_img{
+        display: block;
+        position: absolute;
+        bottom: 0;
     }
     .menu_close{
         position: absolute;
@@ -467,25 +499,37 @@ footer{
         flex-direction: column;
         align-items: center;
         row-gap: 2.5rem;
-
+    }
+    .nav_btn{
+        color: var(--Very-Light-Gray);
+        border: 2px solid var(--Very-Light-Gray);
+        width: 80%;
+        cursor: pointer;
+        font-size: 1rem;
     }
     .nav_link{
         color: #fff;
+        font-size: 1rem;
     }
     .hero_section{
+        position: initial;
         padding: 0 0 2rem;
         margin: 0;
+        /* overflow-x: hidden;
+        overflow-y: visible; */
     }
     .hero_cont{
         display: flex;
         flex-direction: column-reverse;
         gap: 0;
+        position: relative;
     }
     .hero_content,
     .hero_display{
         flex: 1;
     }
     .hero_content{
+        position: relative;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -493,6 +537,11 @@ footer{
         align-items: center;
         row-gap: 1rem;
         text-align: center;
+    }
+    .hero_btn{
+        padding: .75rem 2rem;
+        margin-bottom: 5rem;
+        letter-spacing: 1px;
     }
     .hero_display{
         width: calc(100% + 5rem);
@@ -506,11 +555,32 @@ footer{
         object-fit: cover;
         border-radius: 0;
     }
-    .hero_design{
-        display: none;
+    .hero_bg{
+        position: absolute;
+        width: 150px;
+    }
+    .top_bg{
+        position: absolute;
+        right: 0;
+        top: 70%;
+    }
+    .bot_bg{
+        left: -2.5rem;
+        top: -5.5rem;
     }
     .section_title{
         text-align: center;
+        position: relative;
+    }
+    .section_title::before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 150px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: var(--text-color);
     }
     .about_cont{
         display: grid;
@@ -524,6 +594,14 @@ footer{
         align-items: center;
         text-align: center;
     }
+    .card_desc{
+        font-size: .913rem;
+    }
+    .about_cont img{
+        width: 80px;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
     .newsletter_cont{
         display: flex;
         flex-direction: column;
@@ -531,6 +609,10 @@ footer{
         align-items: center;
         justify-content: center;
         text-align: center;
+        background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    }
+    .news_btn{
+        letter-spacing: 1px;
     }
     .footer_logo{
         display: flex;
